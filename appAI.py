@@ -76,7 +76,7 @@ def computer_move():
 def check_spot():
     if len(board_check) == 9:
         return -1
-    elif len(board_check) == 1 and not board[4].isdigit():
+    elif len(board_check) == 1 and isinstance(board[4], basestring):
         return 4
     elif ai_board[0] == ai_board[1] and board[2].isdigit():
         return 2
